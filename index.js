@@ -67,6 +67,7 @@ function createTemplate(data, id) {
 
     // The raw template code
     code = parser.compile.call(template);
+    template.code = code;
 
     // The compiled render function - this is all we need
     render = new Function('_context', '_parents', '_filters', '_', '_ext', [
